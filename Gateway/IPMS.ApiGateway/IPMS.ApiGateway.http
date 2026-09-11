@@ -1,0 +1,6 @@
+@IPMS.ApiGateway_HostAddress = http://localhost:5174
+
+GET {{IPMS.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

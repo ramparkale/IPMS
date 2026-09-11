@@ -1,0 +1,6 @@
+@IPMS.CustomerService_HostAddress = http://localhost:5276
+
+GET {{IPMS.CustomerService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
