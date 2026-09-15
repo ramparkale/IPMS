@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IPMS.Shared
+namespace IPMS.Shared.Models
 {
-    internal class Events
+    internal class Roles
     {
     }
 }

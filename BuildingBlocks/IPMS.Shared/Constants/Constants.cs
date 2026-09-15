@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IPMS.Shared
+namespace IPMS.Shared.Constants
 {
-    internal class Roles
+    internal class Constants
     {
     }
 }

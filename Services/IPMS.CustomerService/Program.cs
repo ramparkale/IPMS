@@ -1,18 +1,18 @@
 using IPMS.CustomerService.Data;
 using IPMS.CustomerService.Repositories;
 using IPMS.CustomerService.Services;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+//using IPMS.Shared.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-
+//builder.UseMiddleware<CorrelationIdMiddleware>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//builder.UseMiddleware<ExceptionHandlingMiddleware>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 builder.Services.AddScoped<ICustomerService, CustomerService>(); 
