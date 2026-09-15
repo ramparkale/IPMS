@@ -1,6 +1,20 @@
-﻿namespace IPMS.IdentityService.Entities
+﻿namespace IPMS.IdentityService.Entities;
+
+public class Role
 {
-    public class Role
-    {
-    }
+    public int RoleId { get; set; }
+
+    public string RoleName { get; set; } = string.Empty;
+
+    public string? Description { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public DateTime CreatedDate { get; set; }
+
+    public ICollection<UserRole> UserRoles { get; set; }
+        = new List<UserRole>();
+
+    public ICollection<RolePermission> RolePermissions { get; set; }
+        = new List<RolePermission>();
 }

@@ -1,6 +1,21 @@
-﻿namespace IPMS.IdentityService.Entities
+﻿namespace IPMS.IdentityService.Entities;
+
+public class User
 {
-    public class User
-    {
-    }
+    public int UserId { get; set; }
+
+    public string UserName { get; set; } = string.Empty;
+
+    public string Email { get; set; } = string.Empty;
+
+    public string PasswordHash { get; set; } = string.Empty;
+
+    public bool IsActive { get; set; }
+
+    public DateTime CreatedDate { get; set; }
+
+    public DateTime? ModifiedDate { get; set; }
+
+    public ICollection<UserRole> UserRoles { get; set; }
+        = new List<UserRole>();
 }
